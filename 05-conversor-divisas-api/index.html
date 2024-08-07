@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>25-Conversor Divisas</title>
+    <meta name="description" content="Ejercicios que haremos en clase del curso de confección de páginas web" />
+    <meta name="keywords" content="html,css,javascript,web,curso,ejercicio" />
+    <meta name="author" content="Óscar Rey" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/fav-icon.png" />
+
+    <!-- Cargo iconos básicos de bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+
+    <!-- Cargo mi hoja de estilos de BOOTSTRAP (cargar siempre al final) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- Cargo mi hoja de estilos (cargar siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+</head>
+
+<body onload="cargarSelector()">
+    <header>
+        <nav>
+        </nav>
+    </header>
+
+    <main class="container ">
+
+        <h1 class="my-4 text-center ">Conversor Divisas</h1>
+
+
+        <form class="row" action="">
+            
+                <div class="col-3 ">
+                    <input class="form-control" type="number" id="cantidad" name="cantidad" min="1" placeholder="Cantidad">
+
+                </div>
+                <div class="col-3 ">
+                    <select class="form-select " name="moneda-entrada" id="moneda-entrada">
+                        <option selected disabled>-- Divisa --</option>
+                        <option value="EUR">EUR - €</option>
+                        <option value="USD">USD - $</option>
+                        <option value="GBP">GBP - &#163;</option>
+                        <option value="JPY">JPY - &#165;</option>
+                    </select>
+                </div>
+                
+                <div class="col-3 text-center align-content-center ">
+                    Convertir en:
+                </div>
+                <div class="col-3 ">
+                    <select class="form-select " name="moneda-salida" id="moneda-salida">
+                        <option selected disabled>-- Divisa --</option>
+                        <option value="EUR">EUR - €</option>
+                        <option value="USD">USD - $</option>
+                        <option value="GBP">GBP - &#163;</option>
+                        <option value="JPY">JPY - &#165;</option>
+                        
+                    </select>
+                </div>
+                <div class="col-12 text-center p-4 ">
+                    
+                    
+                    <button type="button" class="btn btn-primary" onclick="convertir()">Convertir</button>
+
+                </div>
+
+        </form>
+
+
+        <table class="table table-dark table-striped">
+            <tr>
+                <th class="text-center" id="t-moneda-entrada"></th>
+                <th class="text-center" id="t-moneda-salida"></th>
+            </tr>
+            <tr>
+                <td id="t-cantidad-entrada" class="text-center"></td>
+                <td id="t-cantidad-salida" class="text-center"></td>
+            </tr>
+          </table>
+    </main>
+
+    <footer>
+    </footer>
+
+
+    <!-- Cargo el fichero JS de BOOTSTRAP -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- Cargo mi fichero .js -->
+    <!-- atributo defer pone el fichero al final de la pagina aunque este colocado al principio del index -->
+    <script src="js/main.js" defer></script>
+</body>
+
+</html>
